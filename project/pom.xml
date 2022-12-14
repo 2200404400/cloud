@@ -30,13 +30,6 @@
             <artifactId>system</artifactId>
             <version>1.0.0</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>bootstrap</artifactId>
-            <version>5.2.3</version>
-        </dependency>
-
         <!-- web，用于无间断开启服务 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
