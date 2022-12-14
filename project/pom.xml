@@ -19,7 +19,7 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring-boot.version>2.4.1</spring-boot.version>
+        <spring-boot.version>2.7.6</spring-boot.version>
     </properties>
 
 
@@ -29,6 +29,12 @@
             <groupId>org.cloud</groupId>
             <artifactId>system</artifactId>
             <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>5.2.3</version>
         </dependency>
 
         <!-- web，用于无间断开启服务 -->
@@ -92,6 +98,11 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-boot-starter</artifactId>
             <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <version>3.1.4</version>
         </dependency>
     </dependencies>
 

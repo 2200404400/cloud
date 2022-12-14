@@ -21,5 +21,6 @@
         <module>system</module>
         <module>util</module>
         <module>knife4j</module>
+        <module>eureka</module>
     </modules>
 </project>
