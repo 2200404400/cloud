@@ -14,7 +14,6 @@ import javax.annotation.Resource;
  * 3. mapper    方法命名规则，select、update、delete、insert
  *
  * @author 22004
- * @date 2022.11.22
  */
 @Service
 public class DemoServiceImpl extends MPJBaseServiceImpl<DemoMapper, Demo> implements DemoService {
