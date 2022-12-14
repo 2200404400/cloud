@@ -13,7 +13,7 @@ import javax.annotation.Resource;
  * 2. service   方法命名规则，get、set、add、del
  * 3. mapper    方法命名规则，select、update、delete、insert
  *
- * @author 22004
+ * @author ting
  */
 @Service
 public class DemoServiceImpl extends MPJBaseServiceImpl<DemoMapper, Demo> implements DemoService {
