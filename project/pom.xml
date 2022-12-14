@@ -46,6 +46,11 @@
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-micro-spring-boot-starter</artifactId>
+            <version>3.0.3</version>
+        </dependency>
         <!-- boot，基础中的基础 -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>

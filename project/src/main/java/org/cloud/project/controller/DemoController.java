@@ -1,7 +1,6 @@
 package org.cloud.project.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.cloud.base.R;
 import org.cloud.project.entity.Demo;
 import org.cloud.project.manager.DemoManager;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,13 +26,13 @@ public class DemoController {
 
 
     @GetMapping("demo")
-    public R demo(Demo demo) {
+    public String demo(Demo demo) {
         try {
             //manager.demo();
-            return R.info();
+            return "R.info()";
         } catch (Exception e) {
             log.error(this.getClass().getName(), e.getMessage());
-            return R.error(e);
+            return "R.error(e)";
         }
     }
 }

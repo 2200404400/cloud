@@ -20,5 +20,6 @@
         <module>project</module>
         <module>system</module>
         <module>util</module>
+        <module>knife4j</module>
     </modules>
 </project>
