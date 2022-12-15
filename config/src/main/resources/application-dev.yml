@@ -1,0 +1,25 @@
+server:
+  # 端口
+  port:
+
+spring:
+  application:
+    # 项目名称
+    name: project
+  datasource:
+    # 驱动
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 数据库地址
+    url: jdbc:mysql://localhost:3306/blue?serverTimezone=UTC
+    # 账号
+    username: a
+    # 满名
+    password: a
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:5001

@@ -1,0 +1,29 @@
+# 应用服务 WEB 访问端口
+server:
+  port: 5002
+
+# Config服务端
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          # git地址
+          uri: https://github.com/2200404400/cloud.git
+          # 搜索路径
+          search-paths: config/src/main/resources
+          # 跳过SSL证书验证
+          skipSslValidation: true
+          # 若git不开放则需要填写账号密码
+          #username:
+          #password:
+      # 分支
+      label: master
+
+# 注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:5001/eureka
