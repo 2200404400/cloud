@@ -1,10 +1,10 @@
-# 应用服务 WEB 访问端口
 server:
+  # 端口
   port: 5002
 
-# Config服务端
 spring:
   application:
+    # 项目名称
     name: config
   cloud:
     config:
@@ -21,11 +21,16 @@ spring:
           #password:
       # 分支
       label: master
+    loadbalancer:
+      cache:
+        # 高版本Cloud会自动加载Loadbalancer，若是找不到会在控制台Warp（警报），设为false后关闭此功能
+        enabled: false
 
-# 注册中心
+
 eureka:
   client:
     service-url:
+      # 注册中心地址
       defaultZone: http://127.0.0.1:5001/eureka
   instance:
     # 描述信息（可选）

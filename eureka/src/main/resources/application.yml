@@ -2,6 +2,11 @@ spring:
   application:
     # 项目名称
     name: eureka
+  cloud:
+    loadbalancer:
+      cache:
+        # 高版本Cloud会自动加载Loadbalancer，若是找不到会在控制台Warp（警报），设为false后关闭此功能
+        enabled: false
 
 server:
   # 端口
@@ -15,7 +20,7 @@ eureka:
     # 是否在Eureka Server中注册自己，若是开启则需要配置eureka地址，不配置的话会警告，但是还可以继续使用，因此不打开
     register-with-eureka: true
     # 是否为仆从服务 为false表示自己的注册中心
-    fetch-registry: true
+    fetch-registry: false
 
   server:
     # 是否开启保护模式
@@ -25,3 +30,4 @@ eureka:
     prefer-ip-address: true
     # 描述信息（可选）
     instance-id: 注册中心
+
