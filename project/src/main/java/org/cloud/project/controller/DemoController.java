@@ -1,5 +1,8 @@
 package org.cloud.project.controller;
 
+import com.github.xiaoymin.knife4j.annotations.ApiOperationSupport;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.cloud.base.R;
 import org.cloud.project.entity.Demo;
@@ -21,11 +24,14 @@ import javax.annotation.Resource;
  */
 @Slf4j
 @RestController
+@Api(value = "端点Value", tags = "端点Tags")
 public class DemoController {
     @Resource
     private DemoService service;
 
     @GetMapping("demo")
+    @ApiOperation(value = "方法Value", notes = "方法Notes")
+    @ApiOperationSupport(order = 0)
     public R<Object> demo(Demo demo) {
         try {
             service.demo();

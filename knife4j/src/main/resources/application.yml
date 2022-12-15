@@ -1,6 +1,6 @@
 # 端口
 server:
-  port: 50003
+  port: 5003
 
 # SpringBoot版本超过2.4后Knife4j需要添加才能运行
 spring:
