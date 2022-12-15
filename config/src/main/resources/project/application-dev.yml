@@ -24,4 +24,4 @@ eureka:
   client:
     service-url:
       # 注册中心地址
-      defaultZone: http://127.0.0.1:5001
+      defaultZone: http://127.0.0.1:5001/eureka
