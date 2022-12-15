@@ -23,5 +23,8 @@ spring:
 eureka:
   client:
     service-url:
-      # 注册中心地址
+      # 注册中心地址，必须添加/eureka后缀，否则访问不到注册中心
       defaultZone: http://127.0.0.1:5001/eureka
+  instance:
+    # 描述信息（可选）
+    instance-id: 项目
