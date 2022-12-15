@@ -27,3 +27,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:5001/eureka
+  instance:
+    # 描述信息（可选）
+    instance-id: 配置

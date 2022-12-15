@@ -23,3 +23,5 @@ eureka:
   instance:
     # 是否显示真实IP, 在注册中心Status的网页直达查看 -> localhost > 192.168.70.101
     prefer-ip-address: true
+    # 描述信息（可选）
+    instance-id: 注册中心
