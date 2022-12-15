@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    config:
+      # config服务端地址，必须添加http://，否则不生效
+      uri: http://127.0.0.1:5002
+      # 文件名称
+      name: application
+      # 环境
+      profile: dev
+      # 分支
+      label: master

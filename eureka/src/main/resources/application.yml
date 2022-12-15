@@ -1,0 +1,25 @@
+spring:
+  application:
+    # 项目名称
+    name: eureka
+
+server:
+  # 端口
+  port: 5001
+
+eureka:
+  client:
+    service-url:
+      # 其他注册中心地址，也可以配上自己，必须加上后缀：/eureka
+      defaultZone: http://127.0.0.1:5001/eureka
+    # 是否在Eureka Server中注册自己，若是开启则需要配置eureka地址，不配置的话会警告，但是还可以继续使用，因此不打开
+    register-with-eureka: true
+    # 是否为仆从服务 为false表示自己的注册中心
+    fetch-registry: false
+
+  server:
+    # 是否开启保护模式
+    enable-self-preservation: false
+  instance:
+    # 是否显示真实IP, 在注册中心Status的网页直达查看 -> localhost > 192.168.70.101
+    prefer-ip-address: false

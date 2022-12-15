@@ -30,6 +30,8 @@
             <artifactId>system</artifactId>
             <version>1.0.0</version>
         </dependency>
+
+
         <!-- web，用于无间断开启服务 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -45,17 +47,32 @@
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
         </dependency>
+        <!-- 超级启动配置 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+            <version>3.1.5</version>
+        </dependency>
+        <!-- 读取配置 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+            <version>3.1.5</version>
+        </dependency>
+        <!-- swagger -->
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-micro-spring-boot-starter</artifactId>
             <version>3.0.3</version>
         </dependency>
-        <!-- boot，基础中的基础 -->
+        <!-- 集成配置-->
         <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.1.4</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <version>3.1.4</version>
         </dependency>
+
+
         <!-- 实体类注解 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -86,16 +103,11 @@
             <artifactId>mybatis-plus-join</artifactId>
             <version>1.3.5</version>
         </dependency>
-        <!-- 前后端交互 -->
+        <!-- 端点验证 -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-boot-starter</artifactId>
             <version>3.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-            <version>3.1.4</version>
         </dependency>
     </dependencies>
 
