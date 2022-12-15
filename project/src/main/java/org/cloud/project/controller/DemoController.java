@@ -35,4 +35,9 @@ public class DemoController {
             return R.error(e);
         }
     }
+
+    @GetMapping("go")
+    public R<Object> go() {
+        return R.info();
+    }
 }
