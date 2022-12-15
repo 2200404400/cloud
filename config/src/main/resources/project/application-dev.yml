@@ -1,6 +1,6 @@
 server:
   # 端口
-  port:
+  port: 5011
 
 spring:
   application:

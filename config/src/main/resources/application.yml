@@ -13,7 +13,7 @@ spring:
           # git地址
           uri: https://github.com/2200404400/cloud.git
           # 搜索路径
-          search-paths: config/src/main/resources
+          search-paths: config/src/main/resources/project
           # 跳过SSL证书验证
           skipSslValidation: true
           # 若git不开放则需要填写账号密码
