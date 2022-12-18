@@ -8,7 +8,6 @@ import org.cloud.util.DateUtils;
  * 控制层统一返回类型
  *
  * @author 22004
- * @date 2022.11.22
  */
 @Data
 public class R<T> {

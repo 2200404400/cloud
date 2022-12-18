@@ -23,6 +23,5 @@ public class DemoServiceImpl extends MPJBaseServiceImpl<DemoMapper, Demo> implem
     @Override
     public void demo() {
         mapper.demo();
-
     }
 }
