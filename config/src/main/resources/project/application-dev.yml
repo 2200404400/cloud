@@ -15,11 +15,11 @@ spring:
     # 驱动
     driver-class-name: com.mysql.cj.jdbc.Driver
     # 数据库地址
-    url: jdbc:mysql://localhost:3306/blue?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC
     # 账号
-    username: a
+    username: root
     # 满名
-    password: a
+    password: root
   mvc:
     pathmatch:
       # 配置mvc路径
