@@ -13,7 +13,7 @@ spring:
           # git地址
           uri: https://github.com/2200404400/cloud.git
           # 搜索路径，用斜杠分割，星号代表所有（/**）代表目录下所有的文件
-          search-paths: config/**
+          search-paths: config/file/*
           # 跳过SSL证书验证
           skipSslValidation: true
           # 若git不开放则需要填写账号密码
