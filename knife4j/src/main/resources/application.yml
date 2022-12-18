@@ -23,6 +23,6 @@ knife4j:
       # 名称，可以随便取
       - name: 项目
         # 模块的Http地址
-        uri: 127.0.0.1:50011
+        uri: 127.0.0.1:5011
         # 获取Swagger Json信息的Http后缀路径，可以加个问好设置分组，若分组后被访问的模块没有这个组会报错
         location: /v2/api-docs
