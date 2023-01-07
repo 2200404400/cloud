@@ -10,5 +10,6 @@ import org.junit.jupiter.api.Test;
 public class GoTest {
     @Test
     public void go() {
+
     }
 }

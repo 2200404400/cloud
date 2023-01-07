@@ -1,8 +1,9 @@
-package org.cloud.project.service;
+package org.cloud.project.service.impl;
 
 import com.github.yulichang.base.MPJBaseServiceImpl;
 import org.cloud.project.entity.Demo;
 import org.cloud.project.mapper.DemoMapper;
+import org.cloud.project.service.DemoService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

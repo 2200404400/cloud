@@ -3,7 +3,7 @@ package org.cloud.project.controller;
 import lombok.extern.slf4j.Slf4j;
 import org.cloud.base.R;
 import org.cloud.project.entity.Demo;
-import org.cloud.project.service.DemoService;
+import org.cloud.project.manager.DemoManager;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,12 +23,12 @@ import javax.annotation.Resource;
 @RestController
 public class DemoController {
     @Resource
-    private DemoService service;
+    private DemoManager manager;
 
     @GetMapping("demo")
     public R demo(Demo demo) {
         try {
-            service.demo();
+            manager.demo();
             return R.info();
         } catch (Exception e) {
             log.error(this.getClass().getName(), e.getMessage());

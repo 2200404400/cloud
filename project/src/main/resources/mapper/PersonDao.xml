@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.cloud.project.dao.PersonDao">
+
+    <resultMap type="org.cloud.project.entity.Person" id="PersonMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="height" column="height" jdbcType="VARCHAR"/>
+        <result property="fkStudentId" column="fk_student_id" jdbcType="INTEGER"/>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+        <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
+        <result property="updateDate" column="update_date" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!-- 批量插入 -->
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into test.person(name, height, fk_student_id, is_delete, create_date, update_date)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.name}, #{entity.height}, #{entity.fkStudentId}, #{entity.isDelete}, #{entity.createDate},
+            #{entity.updateDate})
+        </foreach>
+    </insert>
+    <!-- 批量插入或按主键更新 -->
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into test.person(name, height, fk_student_id, is_delete, create_date, update_date)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.name}, #{entity.height}, #{entity.fkStudentId}, #{entity.isDelete}, #{entity.createDate},
+            #{entity.updateDate})
+        </foreach>
+        on duplicate key update
+        name = values(name) , height = values(height) , fk_student_id = values(fk_student_id) , is_delete =
+        values(is_delete) , create_date = values(create_date) , update_date = values(update_date)
+    </insert>
+
+</mapper>
+

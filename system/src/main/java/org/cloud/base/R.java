@@ -18,7 +18,7 @@ public class R<T> {
     /**
      * 状态
      */
-    private boolean isSucceed;
+    private boolean status;
     /**
      * 时间
      */
@@ -46,7 +46,7 @@ public class R<T> {
     public static <T> R<T> info(T data) {
         R<T> r = new R<>();
         r.setCode(ResponseCodeEnum.A200.getCode());
-        r.setSucceed(ResponseCodeEnum.A200.isSucceed());
+        r.setStatus(ResponseCodeEnum.A200.isSucceed());
         r.setDate(DateUtils.getNow(DateUtils.YYYY_MM_DD_HH_MM_SS));
         r.setMessage(ResponseCodeEnum.A200.getMessage());
         r.setData(data);
@@ -59,7 +59,7 @@ public class R<T> {
     public static <T> R<T> error(Exception exception) {
         R<T> r = new R<>();
         r.setCode(ResponseCodeEnum.A400.getCode());
-        r.setSucceed(ResponseCodeEnum.A400.isSucceed());
+        r.setStatus(ResponseCodeEnum.A400.isSucceed());
         r.setDate(DateUtils.getNow(DateUtils.YYYY_MM_DD_HH_MM_SS));
         r.setMessage(ResponseCodeEnum.A400.getMessage() + "：" + exception.getMessage());
         return r;
