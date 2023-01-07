@@ -9,3 +9,7 @@ spring:
       profile: dev
       # 分支
       label: master
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

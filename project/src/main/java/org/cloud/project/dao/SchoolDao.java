@@ -1,14 +1,14 @@
 package org.cloud.project.dao;
 
 import com.github.yulichang.base.MPJBaseMapper;
-import org.cloud.project.entity.Person;
+import org.cloud.project.entity.School;
 
 /**
- * 人(Person)表数据库访问层
+ * 学校(School)表数据库访问层
  *
  * @author ting
  * @since 2023-01-07 19:09:44
  */
-public interface PersonDao extends MPJBaseMapper<Person> {
+public interface SchoolDao extends MPJBaseMapper<School> {
 
 }

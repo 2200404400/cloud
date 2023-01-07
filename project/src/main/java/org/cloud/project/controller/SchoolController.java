@@ -3,25 +3,25 @@ package org.cloud.project.controller;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.cloud.base.R;
-import org.cloud.project.entity.Person;
-import org.cloud.project.manager.PersonManager;
+import org.cloud.project.entity.School;
+import org.cloud.project.manager.SchoolManager;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * 人(Person)表控制层
+ * 学校(School)表控制层
  *
  * @author ting
- * @since 2023-01-07 19:09:44
+ * @since 2023-01-07 19:09:43
  */
 @Slf4j
 @RestController
-@RequestMapping("person")
-public class PersonController {
+@RequestMapping("school")
+public class SchoolController {
     @Resource
-    private PersonManager manager;
+    private SchoolManager manager;
 
     /**
      * 获取
@@ -31,12 +31,12 @@ public class PersonController {
      * @return PersonDTO集合
      */
     @GetMapping("getList")
-    public R<Page<Person>> getList(Page<Person> page, Person vo) {
+    public R<Page<School>> getList(Page<School> page, School vo) {
         try {
-            Page<Person> personList = manager.getList(page, vo);
+            Page<School> personList = manager.getList(page, vo);
             return R.info(personList);
         } catch (Exception e) {
-            log.error("Person > getList：操作失败");
+            log.error("School > getList：操作失败");
             return R.error(e);
         }
     }
@@ -48,12 +48,12 @@ public class PersonController {
      * @return 响应消息
      */
     @PostMapping("add")
-    public R<String> add(Person vo) {
+    public R<String> add(School vo) {
         try {
             manager.add(vo);
             return R.info();
         } catch (Exception e) {
-            log.error("Person > add：操作失败");
+            log.error("School > add：操作失败");
             return R.error(e);
         }
     }
@@ -65,12 +65,12 @@ public class PersonController {
      * @return 响应消息
      */
     @PutMapping("set")
-    public R<String> set(Person vo) {
+    public R<String> set(School vo) {
         try {
             manager.set(vo);
             return R.info();
         } catch (Exception e) {
-            log.error("Person > set：操作失败");
+            log.error("School > set：操作失败");
             return R.error(e);
         }
     }
@@ -87,7 +87,7 @@ public class PersonController {
             manager.del(ids);
             return R.info();
         } catch (Exception e) {
-            log.error("Person > del：操作失败");
+            log.error("School > del：操作失败");
             return R.error(e);
         }
     }
